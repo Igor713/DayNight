@@ -5,6 +5,10 @@ body {
     height: 100vh;
 }
 
+.instruction {
+    display: none;
+}
+
 .day-night-container {
     position: relative;
     height: 200px;
@@ -115,7 +119,17 @@ body {
     top: 55%;
 }
 
+.birds {
+    opacity: 1;
+    margin-left: 100px;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
 .birds div:nth-child(n) {
+    position: absolute;
     margin-left: -30%;
     transition: 0.7s;
 }
@@ -150,29 +164,25 @@ body {
 }
 
 .day-night-container:hover .water {
-    background-color: #71baf2;
-    height: 100px;
-    position: relative;
-    top: 130px;
-    transition: all .7s ease;
+    background-color: #7fa1bb;
 }
 
 /* hover birds */
 .day-night-container:hover .birds {
-    display: block;
+    opacity: 1;
+    margin-left: 100px;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease;
+    z-index: 1000;
 }
 
 .day-night-container:hover .birds div:nth-child(n) {
     position: absolute;
-    background-color: transparent;
     border-radius: 0;
     border: solid #2a2c36;
     border-width: 0 1px 1px 0;
-    display: inline-block;
     padding: 2px;
-    overflow: hidden;
-    width: 0.4%;
-    height: 0.4%;
     margin-left: 20%;
     margin-top: -20%;
     transition: all 0.5s ease;
@@ -197,4 +207,17 @@ body {
 .birds div:nth-child(4) {
     left: 35%;
     top: 30%;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: 70vh;
+    }
+
+    .instruction {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
 }
