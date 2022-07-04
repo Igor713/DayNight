@@ -1,0 +1,200 @@
+body {
+    background-color: #e9e5e5;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.day-night-container {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-color: #2a2c36;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.sun {
+    position: absolute;
+    background-color: #f2ef88;
+    height: 60px;
+    width: 60px;
+    top: 200px;
+    box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);
+    border-radius: 50%;
+    left: 70px;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.moon {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    background-color: #d6d6d6;
+    top: 70px;
+    left: 80px;
+    box-shadow: inset -10px 2px 0 0 #899098;
+    border-radius: 50%;
+    transition: all 0.7s 0s ease-in-out;
+}
+
+.moon div:nth-child(n) {
+    position: relative;
+    background-color: #b9b8b0;
+    border-radius: 50%;
+    box-shadow: inset 4px -2px 0 0 #535457;
+}
+
+.moon div:nth-child(1) {
+    top: 25%;
+    left: 12%;
+    width: 27%;
+    height: 27%;
+}
+
+.moon div:nth-child(2) {
+    top: -11%;
+    left: 60%;
+    width: 16%;
+    height: 16%;
+}
+
+.moon div:nth-child(3) {
+    top: 25%;
+    left: 44%;
+    width: 16%;
+    height: 16%;
+}
+
+.stars {
+    opacity: 1;
+    margin-left: 100px;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+.stars div:nth-child(n) {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 0.4%;
+    height: 0.4%;
+    margin-left: 20%;
+    margin-top: -20%;
+    transition: all 0.5s ease;
+}
+
+.stars div:nth-child(1) {
+    left: 25%;
+    top: 30%;
+}
+
+.stars div:nth-child(2) {
+    left: 55%;
+    top: 20%;
+}
+
+.stars div:nth-child(3) {
+    left: 60%;
+    top: 60%;
+}
+
+.stars div:nth-child(4) {
+    left: 40%;
+    top: 45%;
+}
+
+.stars div:nth-child(5) {
+    left: 15%;
+    top: 55%;
+}
+
+.birds div:nth-child(n) {
+    margin-left: -30%;
+    transition: 0.7s;
+}
+
+.water {
+    height: 100px;
+    background-color: #7fa1bb;
+    position: relative;
+    top: 130px;
+    transition: all .7s ease;
+}
+
+/* hovers */
+
+.day-night-container:hover {
+    background-color: #e9786b;
+}
+
+.day-night-container:hover .stars div:nth-child(n) {
+    margin-left: 90%;
+    transition: all 0.5s ease;
+}
+
+.day-night-container:hover .sun {
+    opacity: 1;
+    top: 105px;
+}
+
+.day-night-container:hover .moon {
+    left: 120%;
+    top: -50%;
+}
+
+.day-night-container:hover .water {
+    background-color: #71baf2;
+    height: 100px;
+    position: relative;
+    top: 130px;
+    transition: all .7s ease;
+}
+
+/* hover birds */
+.day-night-container:hover .birds {
+    display: block;
+}
+
+.day-night-container:hover .birds div:nth-child(n) {
+    position: absolute;
+    background-color: transparent;
+    border-radius: 0;
+    border: solid #2a2c36;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 2px;
+    overflow: hidden;
+    width: 0.4%;
+    height: 0.4%;
+    margin-left: 20%;
+    margin-top: -20%;
+    transition: all 0.5s ease;
+    transform: rotate(45deg);
+}
+
+.birds div:nth-child(1) {
+    left: 5%;
+    top: 40%;
+}
+
+.birds div:nth-child(2) {
+    left: 15%;
+    top: 48%;
+}
+
+.birds div:nth-child(3) {
+    left: 26%;
+    top: 40%;
+}
+
+.birds div:nth-child(4) {
+    left: 35%;
+    top: 30%;
+}
